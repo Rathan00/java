@@ -13,12 +13,10 @@ public class WashingMachineTest2 {
 		clothes[1] = new Cloth("Polyester", "Red", 390.99f, "Dress", true);
 		clothes[2] = new Cloth("Denim", "Black", 340.99f, "Jeans", false);
 		clothes[3] = new Cloth("Silk", "Green", 190.99f, "Bath Towel", false);
-		clothes[4] = new Cloth("Linen", "White", 290.99f, "Pants", true);
 		
 		try{
 		    
 		    Electricity electricity = new Electricity("AC", 220.0f, 8, 15, "Mahavitaran");
-		    //Electricity electricity = new Electricity("AC", 0, 8, 15, "Mahavitaran");
 		    System.out.println("Electricity : "+electricity);
 		    
 		    WashingPowder washPowder = new WashingPowder(100,"Nirma", "Front Load", true, 10.0f);
@@ -141,7 +139,7 @@ class WashingMachine extends Thread {
 	   
 	   public void run(){
 	       	for(int i=1;i<=time;i++) {
-			System.out.println(WashingMachineBrand+" Washing Machine is washing...Time Elapsed: "+i+" Mins");
+			System.out.println(WashingMachineBrand+" Washing Machine is washing...steps completed: "+i+" Mins");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
